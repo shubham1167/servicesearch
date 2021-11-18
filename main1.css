@@ -1,0 +1,298 @@
+:root{
+    --orange: rgb(235, 190, 131);
+    --main-purple: rgb(68, 68, 68);
+    --light-purple: rgba(187, 134, 252, 0.8);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@media (prefers-color-scheme: dark){
+:root{
+    --body-bg:rgb(40, 46, 46);
+}
+}
+#color-bar, #pointer{
+    animation: bar 3s  infinite alternate;
+}
+
+#top-img{
+    display: flex;
+}
+#mag{
+    padding: 10px;
+    margin-top: 1000px;
+}
+
+@keyframes bar {
+    from{
+        transform: rotateX(0deg);
+    }
+    to{
+        transform: rotateX(15deg);
+    }
+}
+
+
+#box, #pointer-below{
+    animation: box 3s ease-in-out infinite;
+}
+
+
+
+@keyframes box {
+    from{
+        transform: rotateY(0deg);
+    }
+    to{
+        transform: rotateY(20deg);
+    }
+}
+
+#dots{
+    animation: dots 5s ease infinite;
+    transform-origin: center;
+}
+
+@keyframes dots{
+    from{
+        transform: rotateZ(0deg);
+    }
+    to{
+        transform: rotateZ(360deg);
+    }
+}
+
+#bar-2{
+    animation: bar2 3s ease-in ;
+}
+@keyframes bar2{
+    from{
+        color:#E6E6E6;
+    }
+    to{
+        color: #b823f3;
+    }
+}
+
+
+#svg-final{
+    position: absolute;
+    align-items: center;
+}
+
+#Stars, #star5,#star6, #star7{
+    animation: stars 5s ease-out infinite alternate;
+}
+
+@keyframes stars{
+    from{
+        transform: rotateY(0deg);
+    }
+    to{
+        transform: rotateY(40deg);
+    }
+}
+
+#mag{
+    animation: mag 10s  infinite;
+    transform-origin: center;
+}
+@keyframes mag{
+    from{
+        transform: rotateZ(0deg);
+    }
+    to{
+        transform: rotateZ(360deg);
+    }
+}
+
+#planet{
+    animation:planet 2s  infinite alternate;
+    transform-origin:670px 200px;
+}
+@keyframes planet{
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(20deg);
+    }
+}
+
+
+    #w:hover{
+        background-color:var(--light-purple);
+    }
+    #w:active{
+        background-color:white;
+    }
+
+/* body-text */
+.body-txt{
+    position: relative;
+    text-align: center;
+    background-color: var(--main-purple);
+    color: var(--light-purple);
+    padding: 30px;
+    margin: 50px 0px 50px 0px;
+}
+
+/* Slider */
+
+.slider{
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: 100vh;
+    color: white;
+}
+
+.slide{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 0.4s ease-in-out;
+}
+
+.slide.current{
+    opacity: 1;
+}
+
+.content{
+    position: absolute;
+    bottom: 70px;
+    left: -600px;
+    width: 600px;
+    background-color:rgba(187, 134, 252, 0.22);
+    padding: 20px;
+    opacity: 0;
+}
+
+.slide.current .content{
+    opacity:1;
+    transform: translateX(600px);
+    transition: all 0.7s ease-in-out 0.3s;
+}
+
+
+button#next{
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    border: 1px solid white;
+    border-radius: 50%;
+    color: white;
+    background-color: rgba(187, 134, 252, 0.25);
+    padding: 13px 15px;
+    cursor: pointer;
+    outline: none;
+}
+button#prev{
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    border: 1px solid white;
+    border-radius: 50%;
+    color: white;
+    background-color: rgba(187, 134, 252, 0.25);
+    padding: 13px 15px;
+    cursor: pointer;
+    outline: none;
+}
+
+#prev:hover, #next:hover{
+    background-color: white;
+    color:rgba(138, 99, 185, 0.8) ;
+}
+
+
+
+.slide:first-child{
+background: url('./') no-repeat center center/cover;
+}
+
+.slide:nth-child(2) {
+    background: url('./slider-img/iphone-388387_1920.jpg') no-repeat
+      center top/cover;
+  }
+  .slide:nth-child(3) {
+    background: url('./slider-img/keyboard-886462_1920.jpg') no-repeat
+      center top/cover;
+  }
+  .slide:nth-child(4) {
+    background: url('./slider-img/objects-731426.jpg') no-repeat
+      center top/cover;
+  }
+  .slide:nth-child(5) {
+    background: url('./slider-img/technology-4739537_1920.jpg') no-repeat
+      center top/cover;
+  } 
+  
+
+.p-5{
+    display: flex;
+    width: 100%;
+    height: 70vh;
+}
+.col-md-1{
+    position: absolute; 
+    left: -700px;
+    width: 400px;    
+    padding: 20px;
+    opacity: 0;
+    animation: col-md-1-an 2s ease 0s 1 normal forwards;
+   
+    
+}
+
+@keyframes col-md-1-an{
+    to{
+    opacity:1;
+    transform: translateX(800px);
+    transition: all 0.7s ease-in-out 0.3s;
+}
+}
+
+.col-md-2{
+    position: absolute;   
+    left: 560px;
+    width: 400px;
+    padding: 20px;
+    opacity: 0;
+    animation: col-md-2-an 2s ease 0s 1 normal forwards;    
+}
+
+@keyframes col-md-2-an{
+    to{
+    opacity:1;
+    transition: all 0.7s ease-in-out 0.3s;
+    animation-play-state:paused;
+
+    }
+}
+
+
+.col-md-3{
+    position: absolute;   
+    right: -700px;
+    width: 400px;   
+    padding: 20px;
+    opacity: 0;
+    animation: col-md-3-an 2s ease 0s 1 normal forwards;    
+}
+
+@keyframes col-md-3-an{
+    to{
+    opacity:1;
+    transform: translateX(-800px);
+    transition: all 0.7s ease-in-out 0.3s;
+}
+
+}
