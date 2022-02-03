@@ -14,35 +14,8 @@
     />
     <title>Service Search</title>
 </head>
-<body>
-  <nav style="background-color: var(--main-purple) ; margin-bottom: 30px;" class="navbar navbar-expand-lg  navbar-light py-3">
-      <div class="container">
-
-        <div class="top-img">  
-            <img style="margin-top: 8px;" class="mag" src="/Images/mag.png" >
-            <a  style="color: rgb(187, 134, 252); float: left; outline: none;" href="#" class="navbar-brand fs-3 fw-3">Service Search</a>
-        </div>
-
-        <button style="background-color: aliceblue;" class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navmenu">
-            <span style="color: cornflowerblue;" class="navbar-toggler-icon"></span>
-        </button>
-
-        <div class="collapse navbar-collapse" id="navmenu">
-            <ul class="navbar-nav ms-auto">
-                <li class="nav-item">
-                    <a id="w" style="color: aliceblue;" href="#Search" class="nav-link">What do you want to search?</a>
-                </li>
-                <li class="nav-item">
-                    <a id="w" style="color: aliceblue;" href="#Area" class="nav-link">What area do you live in?</a>
-                </li>
-                <li class="nav-item">
-                    <a id="w" style="color: aliceblue;" href="#Brand" class="nav-link">What brand do you want?</a>
-                </li>
-            </ul>
-        </div>
-      </div>
-  </nav>
-
+<body >
+    <%- include('./Partials/nav.ejs')  %>
   <div class="svg-final">
     <svg width="100%" height="fit-content" viewBox="0 0 1089 486" fill="none" xmlns="http://www.w3.org/2000/svg">
         <g id="Group 1">
@@ -280,13 +253,13 @@
 
 
   <!--Search Bars-->
-  <section style="background-color: var(--main-purple); margin-bottom: 50px; color:black; padding:40px 30px 40px 30px;" >
-    <h1 class="mb-4 fs-3 fw-5 text-light">Search Now:</h1>
+  <section style="background-color: var(--main-purple); height: 270px; color:black; padding:45px 30px 50px 30px;" >
+    <h1 style="margin:0 0 55px -100px; text-align: center;"class="fs-1 fw-5 text-light">Search Now!</h1>
     
-        <div class=" d-md-flex justify-content-between align-items-center">
+        <div style="height: 60px;" class=" d-md-flex justify-content-between align-items-center">
 
             <div class="input-group mb-3 ">
-                <span class="input-group-text" style="background-color: var(--light-purple); color:white; " id="inputGroup-sizing-default">Area</span>
+                <span class="input-group-text " style="background-color: var(--light-purple); color:white; height:60px; width: 90px; font-size:30px; " >Area</span>
                 <input type="text" class="form-control" aria-label="Text input with dropdown button">
                 <button style="background-color: var(--light-purple);" class="btn btn-outline-light dropdown-toggle text-light"  type="button" data-bs-toggle="dropdown" aria-expanded="false"></button>
                 <ul class="dropdown-menu dropdown-menu-end">
@@ -299,7 +272,7 @@
               </div>
 
               <div class="input-group mb-3 px-3">
-                <span class="input-group-text" style="background-color: var(--light-purple); color:white" id="inputGroup-sizing-default">Brand</span>
+                <span class="input-group-text" style="background-color: var(--light-purple); color:white; height: 60px; width: 105px; font-size:30px; " id="inputGroup-sizing-default">Brand</span>
                 <input type="text" class="form-control" aria-label="Text input with dropdown button">
                 <button style="background-color: var(--light-purple);" class="btn btn-outline-light dropdown-toggle text-light" type="button" data-bs-toggle="dropdown" aria-expanded="false"></button>
                 <ul class="dropdown-menu dropdown-menu-end">
@@ -311,7 +284,7 @@
                 </ul>
               </div>  
 
-              <button type="button" style="background-color: var(--light-purple) ; height: 38px; color:white;" class="btn  mb-3   d-sm-align-content-center  btn-outline-light">Search</button>
+              <a href="page2"><button type="button"  style="background-color: var(--light-purple) ; height: 60px; color:white;width: 110px; font-size:30px; " class="btn  mb-3   d-sm-align-content-center  btn-outline-light">Search</button></a>
 
         </div>
     </section>
@@ -320,7 +293,30 @@
 <!-- Slider -->
 
 
+
+
 <div class="slider current">
+
+<style>
+    .slide:nth-child(2) {
+    background: url('/Images/iphone-388387_1920.jpg') no-repeat
+      center top/cover;
+  }
+  .slide:nth-child(3) {
+    background: url('/Images/keyboard-886462_1920.jpg') no-repeat
+      center top/cover;
+  }
+  .slide:nth-child(4) {
+    background: url('/Images/board.jpg') no-repeat
+      center top/cover;
+  }
+  .slide:nth-child(5) {
+    background: url('/Images/technology-4739537_1920.jpg') no-repeat
+      center top/cover;
+  } 
+  
+</style>
+
     <div class="slide current">
         <div class="content">
             <h1>Slide 1</h1>
@@ -360,12 +356,12 @@
 
 
 <div class="body-txt">
-    <h1 class="fs-1 fw-1">The Best!!</h1>
+    <h1 class="fs-1 fw-1 ">The Best!!</h1>
     <br><br>
-    <p class="fs-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel odit iste dolor ullam doloremque totam ut accusantium iusto eius quos reprehenderit eaque commodi mollitia officiis molestias illo, enim similique expedita accusamus blanditiis nobis et reiciendis. Facilis omnis molestiae tenetur animi dolorem perspiciatis, ducimus expedita. At, repellat a vel aliquam odio eligendi? Explicabo veniam incidunt voluptas magnam porro aut aspernatur deserunt totam unde nihil provident, repellendus saepe perferendis labore? Perferendis quia nisi, fuga nemo omnis expedita, molestiae esse ab voluptate modi perspiciatis ducimus rem asperiores, debitis animi! Cupiditate rem veritatis error quaerat quia, est molestias delectus iure eligendi, aliquid, quo porro?</p>
+    <p class="fs-3 text-light">Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel odit iste dolor ullam doloremque totam ut accusantium iusto eius quos reprehenderit eaque commodi mollitia officiis molestias illo, enim similique expedita accusamus blanditiis nobis et reiciendis. Facilis omnis molestiae tenetur animi dolorem perspiciatis, ducimus expedita. At, repellat a vel aliquam odio eligendi? Explicabo veniam incidunt voluptas magnam porro aut aspernatur deserunt totam unde nihil provident, repellendus saepe perferendis labore? Perferendis quia nisi, fuga nemo omnis expedita, molestiae esse ab voluptate modi perspiciatis ducimus rem asperiores, debitis animi! Cupiditate rem veritatis error quaerat quia, est molestias delectus iure eligendi, aliquid, quo porro?</p>
 </div>
 
-
+<div><h1 class="fs-1 fw-1 " style="text-align: center">PRODUCTS SUGGESTED BY US</h1></div>
 
 <!--Suggestions-->
 
@@ -377,14 +373,20 @@
                     <div class="card-body text-center">
                         <!--ICONS-->
                     </div>
-                    <h3 class="container card-title mb-3">
+                    <h3 class="container card-title mb-3" style="text-align: center;">
                         Suggestion 1
                     </h3>
-                    <p class="container card-text mb-3">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus sed vitae architecto iure tempora nisi voluptatibus perferendis suscipit quod reprehenderit, perspiciatis sunt nobis facilis doloribus. Nulla eum, omnis voluptates adipisci consequuntur nisi eaque quia iure ad, rem officia rerum minus.
+                    <p class="container card-text mb-3" style="text-align: center;">
+                        <img src="/Images/objects-731426.jpg" alt="" style="width: 100%;
+                        height: auto;">
+                        <br>
+                        <br>
+                        Lorem ipsum dolor sit amet ipsum dolor sit amet consectetur adipisicing elit. Temporibus sed vitae architecto iure tempora nisi voluptatibus perferendis suscipit quod reprehenderit, perspiciatis sunt nobis facilis doloribus. Nulla eum, omnis voluptates adipisci consequuntur nisi eaque quia iure ad, rem officia rerum minus.
                     </p>
                 </div>
             </div>
+
+            
 
             
 
@@ -396,11 +398,16 @@
                     <h3 class="container card-title mb-3">
                         Suggestion 2
                     </h3>
-                    <p class="container card-text mb-3">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus sed vitae architecto iure tempora nisi voluptatibus perferendis suscipit quod reprehenderit, perspiciatis sunt nobis facilis doloribus. Nulla eum, omnis voluptates adipisci consequuntur nisi eaque quia iure ad, rem officia rerum minus.
+                    <p class="container card-text mb-3" style="text-align: center;">
+                        <img src="/Images/objects-731426.jpg" alt="" style="width: 100%;
+                        height: auto;">
+                        <br>
+                        <br>
+                        Lorem ipsum dolor sit amet ipsum dolor sit amet consectetur adipisicing elit. Temporibus sed vitae architecto iure tempora nisi voluptatibus perferendis suscipit quod reprehenderit, perspiciatis sunt nobis facilis doloribus. Nulla eum, omnis voluptates adipisci consequuntur nisi eaque quia iure ad, rem officia rerum minus.
                     </p>
                 </div>
             </div>
+
             <div class="col-md-3">
                 <div style="background-color: var(--main-purple) ; padding: 30px;" class="card  text-light">
                     <div class="card-body text-center">
@@ -409,8 +416,12 @@
                     <h3 class="container card-title mb-3">
                         Suggestion 3
                     </h3>
-                    <p class="container card-text mb-3">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus sed vitae architecto iure tempora nisi voluptatibus perferendis suscipit quod reprehenderit, perspiciatis sunt nobis facilis doloribus. Nulla eum, omnis voluptates adipisci consequuntur nisi eaque quia iure ad, rem officia rerum minus.
+                    <p class="container card-text mb-3" style="text-align: center;">
+                        <img src="/Images/objects-731426.jpg" alt="" style="width: 100%;
+                        height: auto;">
+                        <br>
+                        <br>
+                        Lorem ipsum dolor sit amet ipsum dolor sit amet consectetur adipisicing elit. Temporibus sed vitae architecto iure tempora nisi voluptatibus perferendis suscipit quod reprehenderit, perspiciatis sunt nobis facilis doloribus. Nulla eum, omnis voluptates adipisci consequuntur nisi eaque quia iure ad, rem officia rerum minus.
                     </p>
                 </div>
             </div>
@@ -422,20 +433,8 @@
 </body>
 
     
-<section class="Footer">
-<div class="container">
-    <footer class="py-3 my-4">
-      <ul class="nav justify-content-center border-bottom pb-3 mb-3">
-        <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Home</a></li>
-        <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Features</a></li>
-        <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Pricing</a></li>
-        <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">FAQs</a></li>
-        <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">About</a></li>
-      </ul>
-      <p class="text-center text-muted">© 2021 Company, Inc</p>
-    </footer>
-  </div>
+<%- include('./Partials/footer.ejs')  %>
 
   <script src="/main.js"></script>
-</section>  
+
 </html>
