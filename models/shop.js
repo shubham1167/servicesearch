@@ -37,54 +37,6 @@ const Oshop_schema = new Schema
     }
 )
 
-// const Linfo = mongoose.Schema
-// ({
-//     Name:
-//     {
-//         type:String,
-//         required:true
-//     }
-// })
-
-// const Lshop_schema = mongoose.Schema(
-//     {
-//         ild:
-//         {
-//             type:String,
-//             required:true
-//         },
-//         Name:
-//         {
-//             type:String,
-//             required:true
-//         },
-//         Location:
-//         {
-//             type:String,
-//             required:true
-//         },
-
-//         Brands:
-//         [{
-//             Name:{
-//                 type:String,
-//                 required:true
-//             }
-//         }],
-
-//         Shop_info:
-//         {
-//             type:String,
-//             required:true
-//         },
-
-//         Estimated_prices:
-//         {
-//             type:String,
-//             required:true
-//         }
-//     }
-// )
 
 const Shop = mongoose.model('official',{Oshop_schema});
 module.exports = Shop;
